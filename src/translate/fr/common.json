@@ -2,5 +2,8 @@
     "form": {
         "label": "Ajouter une tâche",
         "btn": "ajouter"
-    }
+    },
+    "title_form": "Créer une tâche",
+    "title_list": "Vos tâches",
+    "task_lenght": "tâches actives"
 }

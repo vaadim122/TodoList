@@ -2,5 +2,8 @@
     "form": {
         "label": "Add task",
         "btn" : "Add"
-    }
+    },
+    "title_form": "Create task",
+    "title_list": "Your tasks",
+    "task_lenght": "active tasks"
 }

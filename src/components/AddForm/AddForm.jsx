@@ -19,7 +19,7 @@ const styles = {
     border: "1px solid #9b9b9b",
     padding: 15,
     width: "700px",
-    background: "#cecece",
+    background: "#fffddc",
     borderRadius: "5px",
     display: "flex",
     justifyContent: "space-between",
@@ -29,7 +29,7 @@ const styles = {
 const AddForm = ({ classes: { section_form } }) => {
   const { t, i18n } = useTranslation("common");
   const [language, setLanguage] = useState("en");
-  const [text, setText] = useState();
+  const [text, setText] = useState("");
   const dispatch = useDispatch();
 
   const handleLangChange = (evt) => {
@@ -46,6 +46,7 @@ const AddForm = ({ classes: { section_form } }) => {
       text: text,
     };
     dispatch(addTask(task));
+    setText("");
   };
 
   return (
@@ -58,7 +59,12 @@ const AddForm = ({ classes: { section_form } }) => {
           value={text}
         />
       </FormControl>
-      <Button variant="contained" color="secondary" onClick={handeBtn}>
+      <Button
+        type="submit"
+        variant="contained"
+        color="secondary"
+        onClick={handeBtn}
+      >
         {t("form.btn")}
       </Button>
       <Select
